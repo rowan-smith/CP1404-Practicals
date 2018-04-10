@@ -10,8 +10,8 @@ def get_name():
     print_name(user_name)
 
 
-def print_name(user_name, letters=2):
-    for x in range(0, len(user_name), letters):
+def print_name(user_name):
+    for x in range(0, len(user_name), 2):
         print(user_name[x])
 
 get_name()
