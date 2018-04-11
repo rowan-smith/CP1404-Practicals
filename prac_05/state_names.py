@@ -4,7 +4,6 @@ State names in a dictionary
 File needs reformatting
 """
 
-# TODO: Reformat this file so the dictionary code follows PEP 8 convention
 STATE_NAMES = {"QLD": "Queensland",
                "NSW": "New South Wales",
                "NT": "Northern Territory",
@@ -14,14 +13,13 @@ STATE_NAMES = {"QLD": "Queensland",
 
 
 def main():
-    # print(STATE_NAMES)
-    state = input("Enter short state: ")
+    state = input("Enter short state: ").upper()
     while state != "":
         if state in STATE_NAMES:
             print(state, "is", STATE_NAMES[state])
         else:
             print("Invalid short state")
-        state = input("Enter short state: ")
+        state = input("Enter short state: ").upper()
 
 
 main()
