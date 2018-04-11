@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        TextInput:
+            id: input_label
+            text: '34'
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(1)
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(-1)
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Convert Miles to Kilometres'
+            on_press: app.convert_miles_to_kilometres()
+        Label:
+            id: output_label
+            text: ''
+            color: (255, 255, 0, 1)
