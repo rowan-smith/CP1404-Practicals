@@ -2,6 +2,11 @@
 CP1404/CP5632 Practical
 State names in a dictionary
 File needs reformatting
+
+Psduocode:
+
+loop state in STATE_NAMES
+    display formatted state code "is" state
 """
 
 STATE_NAMES = {"QLD": "Queensland",
@@ -20,6 +25,9 @@ def main():
         else:
             print("Invalid short state")
         state = input("Enter short state: ").upper()
+
+    for state in STATE_NAMES:
+        print("{:<4} is {}".format(state, STATE_NAMES[state]))
 
 
 main()
