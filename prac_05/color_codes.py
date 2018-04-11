@@ -15,7 +15,13 @@ COLOR_CODES = {"DeepSkyBlue1": "#00bfff",
 
 
 def main():
-    pass
+    color = input("Please enter a color from the list:\n>> ")
+    while color != "":
+        if color in COLOR_CODES:
+            print("{} - {}".format(color, COLOR_CODES[color]))
+        else:
+            print("Invalid color!")
+        color = input("Please enter a color from the list:\n>> ")
 
 
 main()
