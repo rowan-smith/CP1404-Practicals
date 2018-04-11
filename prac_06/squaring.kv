@@ -1,0 +1,19 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        TextInput:
+            id: input_number
+            text: '7'
+            font_size: 48
+            multiline: False
+        Button:
+            text: 'Square'
+            on_press: app.handle_calculate(int(input_number.text))
+        Label:
+            id: output_label
+            font_size: 48
+            # TODO Color doesn't work??
+            color: (255, 105, 180, 1)
+    BoxLayout:
+        Label:
+            text: 'Enter a number and press "Square"'
