@@ -4,8 +4,10 @@ BoxLayout:
         TextInput:
             id: input_label
             text: '34'
+            on_text: app.convert_miles_to_kilometres()
         BoxLayout:
             orientation: 'vertical'
+            size_hint_x: 0.25
             Button:
                 text: 'Up'
                 on_press: app.handle_increment(1)
