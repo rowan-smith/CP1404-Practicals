@@ -16,10 +16,9 @@ BoxLayout:
                 on_press: app.handle_increment(-1)
     BoxLayout:
         orientation: 'vertical'
-        Button:
+        Label:
             text: 'Convert Miles to Kilometres'
-            on_press: app.convert_miles_to_kilometres()
         Label:
             id: output_label
-            text: ''
+            text: '54.717'
             color: (255, 255, 0, 1)
