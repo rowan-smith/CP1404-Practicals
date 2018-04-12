@@ -13,13 +13,18 @@ class ConverterApp(App):
         return self.root
 
     def handle_increment(self, value):
-        mile_value = int(numerical_error_handle(self.root.ids.input_label.text))
-        mile_value += int(value)
+        try:
+            mile_value = int(numerical_error_handle(self.root.ids.input_label.text))
+            mile_value += int(value)
+            if mile_value <= 0:
+                mile_value = 0
+        except ValueError:
+            mile_value = int(numerical_error_handle(self.root.ids.input_label.text))
         self.root.ids.input_label.text = str(mile_value)
 
     def convert_miles_to_kilometres(self):
         try:
-            mile_value = int(self.root.ids.input_label.text)
+            mile_value = int(numerical_error_handle(self.root.ids.input_label.text))
         except ValueError:
             mile_value = int(numerical_error_handle(self.root.ids.input_label.text))
         kilometres = mile_value * MILES_TO_KM
@@ -29,10 +34,9 @@ class ConverterApp(App):
 def numerical_error_handle(number):
     try:
         if int(number):
-            if int(number) < 1:
-                return int(0)
             return int(number)
     except ValueError:
         return int(0)
+    return int(number)
 
 ConverterApp().run()
