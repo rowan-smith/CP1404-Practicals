@@ -14,6 +14,4 @@ class ProgrammingLanguage:
         return string
 
     def is_dynamic(self):
-        if self.typing == "Dynamic":
-            return True
-        return False
+        return self.typing == "Dynamic"
